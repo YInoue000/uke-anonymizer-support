@@ -1,0 +1,44 @@
+name: 操作の質問・不具合報告
+description: 公開できる内容だけでお問い合わせください。患者情報・UKE・鍵は受け付けません。
+title: "[サポート] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **この投稿はインターネット上で公開されます。**
+        患者情報、施設名、原UKE、仮名化結果、鍵・プロファイル、実データの画面を記載・添付しないでください。
+        ファイルパスやエラー文に名前が含まれる場合は、架空の表記に置き換えてください。
+  - type: input
+    id: app-version
+    attributes:
+      label: アプリのバージョン
+      placeholder: "例：1.0.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windowsのバージョン
+      placeholder: "例：Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 操作手順と症状
+      description: 個人情報・医療情報を含めず、架空の例で説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作と実際の動作
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開内容の確認
+      options:
+        - label: 患者情報・施設を特定する情報・UKE・鍵・プロファイル・実データの画面を含めていません。
+          required: true
